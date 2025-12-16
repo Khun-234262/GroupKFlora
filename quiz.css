@@ -1,0 +1,125 @@
+/* GENERAL LAYOUT  */
+
+body {
+  margin: 0;
+  background: #e8f5e9;
+  font-family: Arial, sans-serif;
+}
+
+.site-header, .site-footer {
+  text-align: center;
+  padding: 50px 10px;
+}
+
+/*  MAP  */
+
+.map-wrap {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.park-map {
+  width: 90%;
+  border-radius: 20px;
+}
+
+/*  HOTSPOTS  */
+
+.hotspot {
+  position: absolute;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+.toggle {
+  display: none;
+}
+
+/* CARD STYLING  */
+
+.card {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 280px;
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  display: none; 
+  z-index: 10;
+}
+
+.toggle:checked ~ .card {
+  display: block;
+}
+
+/*  OPTIONS  */
+
+.options input {
+  display: none;
+}
+
+.options label {
+  display: block;
+  background: #f3f3f3;
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.options label:hover {
+  background: #e0e0e0;
+}
+
+/*  FEEDBACK MESSAGES */
+
+.feedback {
+  display: none;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+/* feedbak right or worng */
+.options input:checked + label + .feedback {
+  display: inline;
+}
+
+/*  CARD BACK  */
+
+.card-back {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/* Close button */
+
+.close-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #ff5252;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
